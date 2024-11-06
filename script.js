@@ -1,41 +1,41 @@
-// Получаем элементы
+// Get elements for #byhalikov
 const overlay = document.getElementById("overlay");
 const mainContent = document.getElementById("main-content");
 const musicButtonContainer = document.getElementById("music-button-container");
 const musicButton = document.getElementById("music-button");
-const musicIcon = document.getElementById("music-icon"); // Иконка музыки
+const musicIcon = document.getElementById("music-icon"); // Music icon for #byhalikov
 const backgroundAudio = document.getElementById("background-audio");
 
-// Переменная для отслеживания состояния музыки
+// Variable to track the music playback state for #byhalikov
 let isPlaying = true;
 
-// Обработчик для клика по оверлею
+// Event listener for the overlay click for #byhalikov
 overlay.addEventListener("click", function() {
-    // Скрыть оверлей
+    // Hide the overlay for #byhalikov
     overlay.style.display = "none";
 
-    // Показать основной контент и кнопку музыки
+    // Show the main content and the music button for #byhalikov
     mainContent.style.display = "block";
-    musicButtonContainer.style.display = "block";  // Показываем контейнер с кнопкой
+    musicButtonContainer.style.display = "block";  // Show the container with the music button
 
-    // Воспроизвести музыку, если она не проигрывается
-    backgroundAudio.volume = 0.2;  // Устанавливаем громкость
-    backgroundAudio.play();  // Запускаем музыку
+    // Play the music if it's not already playing for #byhalikov
+    backgroundAudio.volume = 0.2;  // Set the volume for #byhalikov
+    backgroundAudio.play();  // Start the music for #byhalikov
 
-    // Меняем иконку на иконку включенной музыки
+    // Change the icon to the "music on" icon for #byhalikov
     musicIcon.setAttribute("src", "img/volume.svg");
 });
 
-// Обработчик клика по кнопке музыки
+// Event listener for the music button click for #byhalikov
 musicButton.addEventListener("click", function() {
     if (isPlaying) {
-        backgroundAudio.pause();  // Ставим музыку на паузу
-        musicIcon.setAttribute("src", "img/volume_off.svg");  // Меняем иконку на "выключено"
+        backgroundAudio.pause();  // Pause the music for #byhalikov
+        musicIcon.setAttribute("src", "img/volume_off.svg");  // Change the icon to "music off" for #byhalikov
     } else {
-        backgroundAudio.play();  // Запускаем музыку
-        musicIcon.setAttribute("src", "img/volume.svg");  // Меняем иконку на "включено"
+        backgroundAudio.play();  // Start the music for #byhalikov
+        musicIcon.setAttribute("src", "img/volume.svg");  // Change the icon to "music on" for #byhalikov
     }
 
-    // Меняем состояние на противоположное
+    // Toggle the state for #byhalikov
     isPlaying = !isPlaying;
 });
