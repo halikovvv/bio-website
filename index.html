@@ -3,76 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@attackerhalikov</title> <!-- Initial page title #byhalikov -->
+  <title>@attackerhalikov</title>
 
-  <!-- Link to site icon #byhalikov -->
-  <link rel="icon" href="img/coding.ico" type="image/x-icon"> <!-- Icon is located in the img folder #byhalikov -->
+  <!-- Иконка страницы -->
+  <link rel="icon" href="img/coding.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="styles.css"> 
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="styles.css">
   <script src="title.js"></script> <!-- Connecting the JavaScript file #byhalikov -->
 </head>
 <body>
-  <!-- Falling stars elements #byhalikov -->
-  <div class="stars">
-    <div class="star star-small"></div>
-    <div class="star star-medium"></div>
-    <div class="star star-large"></div>
-    <div class="star star-small"></div>
-    <div class="star star-medium"></div>
-    <div class="star star-large"></div>
-    <div class="star star-small"></div>
-    <div class="star star-medium"></div>
-    <div class="star star-large"></div>
-    <div class="star star-small"></div>
+
+  <!-- Черный оверлей с текстом "Click anywhere" -->
+  <div id="overlay">
+    <div id="click-text">Click anywhere</div>
   </div>
 
-  <!-- Terminal window #byhalikov -->
-  <div id="terminal">
-    <!-- Avatar #byhalikov -->
-    <div id="avatar">
-      <img src="img/avatar.jpg" alt="Avatar" id="avatar-img"> <!-- Avatar image #byhalikov -->
+  <!-- Основной контент -->
+  <div id="main-content" style="display:none;">
+
+    <!-- Падающие звезды -->
+    <div class="stars">
+      <div class="star star-small"></div>
+      <div class="star star-medium"></div>
+      <div class="star star-large"></div>
+      <div class="star star-small"></div>
+      <div class="star star-medium"></div>
+      <div class="star star-large"></div>
+      <div class="star star-small"></div>
+      <div class="star star-medium"></div>
+      <div class="star star-large"></div>
+      <div class="star star-small"></div>
     </div>
 
-    <!-- Terminal text #byhalikov -->
-    <div id="terminal-text">
-      halik.ov
+    <!-- Окно терминала -->
+    <div id="terminal">
+      <!-- Аватар -->
+      <div id="avatar">
+        <img src="img/avatar.jpg" alt="Avatar" id="avatar-img">
+      </div>
+
+      <!-- Текст в терминале -->
+      <div id="terminal-text">
+        halik.ov
+      </div>
+
+<!-- Иконки (Developer, Moderator, Premium, New1, New2) -->
+<div id="icons">
+  <div class="icon-container">
+    <img src="img/owner.svg" alt="Owner" class="icon">
+    <div class="tooltip">Owner</div>
+  </div>
+  <div class="icon-container">
+    <img src="img/dev.svg" alt="Developer" class="icon">
+    <div class="tooltip">Developer</div>
+  </div>
+  <div class="icon-container">
+    <img src="img/javascript.svg" alt="JavaScript" class="icon">
+    <div class="tooltip">JavaScript</div>
+  </div>
+  <div class="icon-container">
+    <img src="img/html.svg" alt="HTML" class="icon">
+    <div class="tooltip">HTML</div>
+  </div>
+  <div class="icon-container">
+    <img src="img/css.svg" alt="CSS" class="icon">
+    <div class="tooltip">CSS</div>
+  </div>
+</div>
+
+
+      <!-- Описание -->
+      <div id="description">
+        <div id="description-text">
+          I am a beginner web developer from Russia, I am not looking for easy ways!
+        </div>
+      </div>
+
+      <!-- Кнопки с переходами -->
+      <div id="button-container">
+        <button class="terminal-button" onclick="window.open('https://github.com/halikovvv', '_blank')">GitHub</button>
+        <button class="terminal-button" onclick="window.open('https://t.me/attackerhalikov', '_blank')">Telegram</button>
+        <button class="terminal-button" onclick="window.open('https://t.me/biohalik0v', '_blank')">Telegram Channel</button>
+        <button class="terminal-button" onclick="window.open('https://github.com/halikovvv/bio-website', '_blank')">Make your bio</button>
+      </div>
     </div>
 
-    <!-- Icons #byhalikov -->
-    <div id="icons">
-      <div class="icon-container">
-        <img src="img/dev.svg" alt="Developer" class="icon"> <!-- Developer icon #byhalikov -->
-        <div class="tooltip">Developer</div> <!-- Tooltip for Developer #byhalikov -->
-      </div>
-      <div class="icon-container">
-        <img src="img/moder.svg" alt="Moderator" class="icon"> <!-- Moderator icon #byhalikov -->
-        <div class="tooltip">Moderator</div> <!-- Tooltip for Moderator #byhalikov -->
-      </div>
-      <div class="icon-container">
-        <img src="img/premium.svg" alt="Premium" class="icon"> <!-- Premium icon #byhalikov -->
-        <div class="tooltip">Premium</div> <!-- Tooltip for Premium #byhalikov -->
-      </div>
+    <!-- Подвал -->
+    <div id="footer">
+      Created by <a href="https://t.me/attackerhalikov" target="_blank">@attackerhalikov</a>
     </div>
 
-    <!-- Description block #byhalikov -->
-    <div id="description">
-      <div id="description-text">
-        I am a beginner web developer from Russia, I am not looking for easy ways! <!-- Description text #byhalikov -->
-      </div>
+    <!-- Блок времени рядом с кнопкой музыки -->
+    <div id="time-container">
+      <div id="time-display"></div> <!-- Здесь будет отображаться время -->
     </div>
 
-    <!-- Buttons #byhalikov -->
-    <div id="button-container">
-      <button class="terminal-button" onclick="window.open('https://github.com/halikovvv', '_blank')">GitHub</button> <!-- GitHub button #byhalikov -->
-      <button class="terminal-button" onclick="window.open('https://t.me/attackerhalikov', '_blank')">Telegram</button> <!-- Telegram button #byhalikov -->
-      <button class="terminal-button" onclick="window.open('https://t.me/biohalik0v', '_blank')">Telegram Channel</button> <!-- Telegram Channel button #byhalikov -->
-      <button class="terminal-button" onclick="window.open('https://github.com/halikovvv/bio-website', '_blank')">Make your bio</button> <!-- Make your bio button #byhalikov -->
+    <!-- Музыкальная кнопка -->
+    <div id="music-button-container">
+      <button id="music-button">
+        <img src="img/volume.svg" alt="Music Icon" class="music-icon" id="music-icon">
+      </button>
     </div>
+
   </div>
 
-  <!-- Footer text #byhalikov -->
-  <div id="footer">
-    Created by <a href="https://t.me/attackerhalikov" target="_blank">@attackerhalikov</a>
-  </div>
+  <!-- Фоновая музыка -->
+  <audio id="background-audio" preload="auto" loop>
+    <source src="audio/default.mp3" type="audio/mp3">
+    Ваш браузер не поддерживает элемент audio.
+  </audio>
+
+  <!-- Подключение JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
